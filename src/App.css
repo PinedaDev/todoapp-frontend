@@ -1,8 +1,127 @@
 .App {
-    border: solid 1px cornflowerblue;
+    background-color: rgb(197, 228, 236);
     border-radius: 20px;
     padding: 1rem;
     margin: 10rem auto;
+    font-family: "Montserrat";
     width: 50%;
     min-height: 20rem;
+    box-shadow: 0px 0px 30px rgba(197, 228, 236, .9);
+}
+
+
+h1 {
+    text-align: center;
+    font-weight: 800;
+    font-size: 3rem;
+    color: rgb(60, 122, 255);
+    text-shadow: 0px 0px 20px rgba(137, 175, 255, 0.9);
+}
+
+header {
+    position: relative;
+}
+
+header>button,
+form,
+input[type="submit"] {
+    border-radius: 10px;
+    transition: .4s;
+    border: none;
+    color: white;
+    padding: .5rem;
+    border-radius: 10px;
+    background: rgb(60, 122, 255);
+    box-shadow: 0px 0px 20px rgba(137, 175, 255, 0.9);
+}
+
+
+
+header>button {
+    font-size: 1.5rem;
+    position: absolute;
+    top: 50%;
+    left: 80%;
+    width: max-content;
+    transition: .4s;
+    border: none;
+    color: white;
+    padding: .5rem;
+    border-radius: 10px;
+    background: rgb(60, 122, 255);
+    box-shadow: 0px 0px 20px rgba(137, 175, 255, 0.9);
+    transform: translateY(-50%);
+}
+
+header>button:hover,
+input[type="submit"]:hover {
+    cursor: pointer;
+    background-color: rgb(70, 21, 245);
+}
+
+p {
+    display: grid;
+    place-items: center;
+    font-size: 3rem;
+    margin-top: 4rem;
+}
+
+form {
+    display: grid;
+    grid-gap: 1rem;
+    width: 50%;
+    margin: auto;
+    padding: 1rem
+}
+
+.form-controll {
+    margin: 0rem 2rem;
+}
+
+label {
+    font-size: 2rem;
+}
+
+input[type="text"],
+input[type="date"] {
+    margin-top: 1rem;
+    padding: .5rem;
+    font-size: 1.5rem;
+    border-radius: 10px;
+    border: none;
+}
+
+input[type="submit"] {
+    width: 30%;
+    font-size: 2rem;
+    margin: auto;
+}
+
+.task {
+    margin: 1rem;
+    display: flex;
+    min-height: 3rem;
+    align-items: center;
+    color: white;
+    justify-content: space-around;
+    border-radius: 10px;
+    background: rgb(60, 122, 255);
+    box-shadow: 0px 0px 20px rgba(137, 175, 255, 0.9);
+}
+
+.task button {
+    background: none;
+    color: white;
+    border: none;
+    font-size: 2rem;
+    font-family: "Montserrat";
+    font-weight: 900;
+    text-shadow: 0px 0px 20px white;
+    transition: .3s ease-in-out;
+}
+
+.task button:hover {
+    color: red;
+    text-shadow: 0px 0px 20px red;
+    cursor: pointer;
 }

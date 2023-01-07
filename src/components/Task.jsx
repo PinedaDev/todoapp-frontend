@@ -1,10 +1,10 @@
 import React from 'react'
 const Task = ({ task, onDelete }) => {
     return (
-        <div>
+        <div className='task'>
             <h2>{task.title}</h2>
             <h3>{task.date}</h3>
-            <button onClick={() => onDelete(task.id)}>delete</button>
+            <button onClick={() => onDelete(task.id)}>X</button>
         </div>
     )
 }

@@ -23,21 +23,23 @@ const AddTask = ({ onAdd }) => {
     return (
         <form onSubmit={onSubmit}>
             <div className='form-controll'>
-                <label htmlFor='title'>Task Title</label>
+                <label htmlFor='title'>Title</label> <br />
                 <input
                     type="text"
                     name="task title"
                     value={title}
                     onChange={(e) => setTitle(e.target.value)}
                     id="title"
+                    required
                     placeholder='Add a task title' />
             </div>
             <div className='form-controll'>
-                <label htmlFor='title'>Task date</label>
+                <label htmlFor='title'>Date</label> <br />
                 <input
                     type="text"
                     name="task date"
                     value={date}
+                    required
                     onChange={(e) => setDate(e.target.value)}
                     id="title"
                     placeholder='Add a task date' />

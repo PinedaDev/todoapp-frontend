@@ -31,15 +31,23 @@ function App() {
 
   return (
     <div className="App">
-      <h1>
-        Todo List
-      </h1>
-      <button onClick={toggleForm}>
-        {!isFormShowed ? "Add todo" : "Cancel"}
-      </button>
+      <header>
+        <h1>
+          Track-It!
+        </h1>
+        <button onClick={toggleForm}>
+          {!isFormShowed ? "Add To Do" : "Cancel"}
+        </button>
+      </header>
+      <hr style={{ "border": "solid 1px white", "margin": "1rem 0" }} />
       {isFormShowed &&
         <AddTask onAdd={addTask} />}
-      <Tasks tasks={tasks} onDelete={deleteTask} />
+      {
+        tasks.length !== 0 ? <Tasks tasks={tasks} onDelete={deleteTask} /> : (
+          <p>Nothing to show</p>
+        )
+
+      }
     </div>
   );
 }
