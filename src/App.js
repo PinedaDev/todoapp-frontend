@@ -21,12 +21,24 @@ function App() {
     setTasks(tasks.filter(task => task.id !== id))
   }
 
+  // Toggle todo form
+
+  const [isFormShowed, setIsFormShowed] = useState(false)
+
+  const toggleForm = () => {
+    isFormShowed ? setIsFormShowed(!isFormShowed) : setIsFormShowed(true)
+  }
+
   return (
     <div className="App">
       <h1>
         Todo List
       </h1>
-      <AddTask onAdd={addTask} />
+      <button onClick={toggleForm}>
+        {!isFormShowed ? "Add todo" : "Cancel"}
+      </button>
+      {isFormShowed &&
+        <AddTask onAdd={addTask} />}
       <Tasks tasks={tasks} onDelete={deleteTask} />
     </div>
   );
