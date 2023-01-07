@@ -1,5 +1,7 @@
 import Task from "./Task"
 
+// tasks list
+
 const Tasks = ({ tasks, onDelete }) => {
     return (
         <>
